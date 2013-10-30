@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: interview-overflow_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: interview-overflow_test
+  pool: 5
