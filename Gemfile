@@ -23,6 +23,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors'
+  gem 'shoulda-matchers'
 end
 
 gem 'jquery-rails'
