@@ -1,0 +1,9 @@
+<h1>Interview Overflow</h1>
+
+<%= form_for @question do |f| %>
+  <%= f.text_field :title, placeholder: "Question"%>
+  <br />
+  <%= f.text_area :description, placeholder: "Question Details" %>
+  <br />
+  <%= f.submit "Submit Question"%>
+<% end %>
