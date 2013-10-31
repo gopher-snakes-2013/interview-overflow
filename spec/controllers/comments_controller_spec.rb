@@ -10,5 +10,10 @@ describe CommentsController do
         post :create, question_id: question.id, comment: { content:  comment.content}
       }.to change{Comment.count}.by(1)
     end
+    it "should not create comment with invalid params" do
+      expect {
+        post :create, question_id: question.id, comment: { content: " " }
+      }.not_to change{Comment.count}
+    end
   end
 end
