@@ -7,3 +7,9 @@
   <br />
   <%= f.submit "Submit Question"%>
 <% end %>
+<h1>List of Popular Interview Questions</h1>
+<ul>
+	<% @questions.each do |question| %>
+		<li><%= question.title %><br><%= question.created_at %></li>
+	<% end %>
+</ul>
