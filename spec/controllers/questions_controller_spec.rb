@@ -22,3 +22,15 @@ describe QuestionsController do
   end
 end
 
+# describe 'GET #index' do
+# 	context 'with params[:question]' do
+# 			it 'redirects to the root_path' do
+# 				question = Question.new
+# 				question.title = "The is the title."
+# 				question.description = "This describes the title."
+# 				question.save
+# 				expect(page).to have_content('The is the title')
+# 		end
+# 	end
+# end
+
