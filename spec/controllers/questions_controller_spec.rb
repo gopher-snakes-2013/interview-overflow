@@ -13,7 +13,7 @@ describe QuestionsController do
   describe '#create' do
     it "creates a question" do
       expect{
-        post :create, post: {title: 'my question', description: 'my descrip'}
+        post :create, question: {title: 'my question', description: 'my descrip'}
         }.to change(Question,:count).by(1)
     end
   end 
