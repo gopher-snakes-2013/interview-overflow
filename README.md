@@ -13,7 +13,7 @@ Guest can click through question for morw info
 
 Next Features:
 
-guest can comment on question 
+guest can comment on question  
 only users can post a question
 guest can become a user
 only users can post comments
