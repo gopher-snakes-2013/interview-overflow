@@ -4,7 +4,7 @@
 <h2>Comments</h2>
   <ul>
     <% @question.comments.each do |comment| %>
-      <li><%= comment.content %></li>
+      <li><%= comment.content %> - <%= comment.created_at.localtime.strftime("Posted on %b %d, %Y at %l:%M %P") %></li>
     <% end %>
   </ul>
 
