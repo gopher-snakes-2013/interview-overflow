@@ -25,6 +25,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'capybara'
 end
 
 gem 'jquery-rails'
