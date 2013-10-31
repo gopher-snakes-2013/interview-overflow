@@ -11,6 +11,14 @@ describe QuestionsController do
 			get :index
 			response.status.should eq(200)
 		end
+  end
 
-	end
+  describe '#create' do
+    it "creates a question" do
+      expect{
+        post :create, question: {title: 'my question', description: 'my descrip'}
+        }.to change(Question,:count).by(1)
+    end
+  end
 end
+

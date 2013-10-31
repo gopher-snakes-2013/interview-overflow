@@ -23,6 +23,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors'
+  gem 'capybara'
   gem 'shoulda-matchers'
   gem 'capybara'
 end
