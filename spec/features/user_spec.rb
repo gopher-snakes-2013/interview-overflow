@@ -16,3 +16,11 @@ feature 'Guest can make a question' do
   end
 
 end
+
+# feature 'Guest can click question title link' do
+#   context 'on homepage' do
+#     it 'can click on a title link' do
+      
+#     end
+#   end
+# end
