@@ -7,9 +7,9 @@ testing
 
 DONE MVP:
 
-Guest can make question
-Guest can view list of questions
-Guest can click through question for morw info
+Guest can make question  
+Guest can view list of questions  
+Guest can click through question for morw info  
 
 Next Features:
 
