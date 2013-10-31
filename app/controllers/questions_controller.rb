@@ -9,5 +9,9 @@ class QuestionsController < ApplicationController
 		Question.create(params[:question])
 		redirect_to root_path
 	end
+
+	def show
+		@question = Question.find(params[:id])
+	end
 	
 end
