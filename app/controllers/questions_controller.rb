@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
 
   def create
     Question.create(params[:post])
-    redirect_to 'index'
+    redirect_to root_path
   end
 
 end
