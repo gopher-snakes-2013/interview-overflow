@@ -26,6 +26,10 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'factory_girl_rails'
+end
+
+group :test do
 end
 
 gem 'jquery-rails'
