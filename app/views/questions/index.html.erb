@@ -10,6 +10,8 @@
 <h2>List of Popular Interview Questions</h2>
 <ul>
 	<% @questions.each do |question| %>
-		<li><h3><%= link_to question.title, question_path(question.id) %> <button id="vote" name="vote" type="submit">+1</button></h3><%= question.created_at %></li>
+		<li><h3><%= link_to question.title, question_path(question.id) %>
+      <%= question.votes %>
+      <%= button_to('+1', question_path(question), method: 'put')%></h3><%= question.created_at %></li>
 	<% end %><br>
 </ul>
