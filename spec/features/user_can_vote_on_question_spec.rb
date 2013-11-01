@@ -2,7 +2,9 @@ require 'spec_helper'
 
 feature 'User can vote on a question' do
 
-  let(:question){Question.create(title: 'my title', content: 'my content')}
+  before :each do
+    Question.create(title: 'my title', description: 'my content')
+  end
 
   context 'when on homepage' do
 
@@ -11,5 +13,7 @@ feature 'User can vote on a question' do
       expect(page).to have_content '+1' 
     end
   end
+
+  
 end
 
