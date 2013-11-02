@@ -1,6 +1,18 @@
 <div class="questions_list">
   <h1><%= @question.title %></h1>
   <p><%= @question.description %> </p>
-
   <%= link_to "Home", root_path %>
 </div>
+
+<h2>Comments</h2>
+  <ul>
+    <% @question.comments.each do |comment| %>
+      <li><%= comment.content %> - <%= comment.created_at.localtime.strftime("Posted on %b %d, %Y at %l:%M %P") %></li>
+    <% end %>
+  </ul>
+
+<%= form_for [@question, @comment] do |f| %>
+  <%= f.label "Leave a Comment" %>
+  <%= f.text_field :content %>
+  <%= f.submit "Post Comment" %>
+<% end %>

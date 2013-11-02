@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-	
+
 	def index
 		@question = Question.new
 		@questions = Question.all
@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
+		@comment = Comment.new
 	end
-	
+
 end
