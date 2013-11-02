@@ -19,6 +19,6 @@ class QuestionsController < ApplicationController
 		question = Question.find(params[:id])
 		question.votes += 1
 		question.update_attribute(:votes,question.votes)
-		redirect_to root_path
+		render json: {votes: question.votes,id: question.id}
 	end
 end

@@ -11,7 +11,7 @@
 <ul>
 	<% @questions.each do |question| %>
 		<li><h3><%= link_to question.title, question_path(question.id) %>
-      <%= question.votes %>
+      <span id=votes_for_<%=question.id%>><%=question.votes%></span>
       <%= button_to('+1', question_path(question), method: 'put')%></h3><%= question.created_at %></li>
 	<% end %><br>
 </ul>
