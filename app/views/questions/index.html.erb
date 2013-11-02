@@ -7,9 +7,11 @@
   <br />
   <%= f.submit "Submit Question"%>
 <% end %>
-<h1>List of Popular Interview Questions</h1>
+<h2>List of Popular Interview Questions</h2>
 <ul>
 	<% @questions.each do |question| %>
-		<li><%= link_to question.title, question_path(question.id) %><br><%= question.created_at %></li>
-	<% end %>
+		<li><h3><%= link_to question.title, question_path(question.id) %>
+      <span id=votes_for_<%=question.id%>>: <%= question.votes if question.votes>0 %></span>
+      <%= button_to('+1', question_path(question), method: 'put')%></h3><%= question.created_at %></li>
+	<% end %><br>
 </ul>
