@@ -5,13 +5,13 @@
 </div>
 
 <h2>Comments</h2>
-  <ul>
+  <ul id='comment_list'>
     <% @question.comments.each do |comment| %>
-      <li><%= comment.content %> - <%= comment.created_at.localtime.strftime("Posted on %b %d, %Y at %l:%M %P") %></li>
+    	<%= render 'comments/comment', :comment => comment %>   
     <% end %>
   </ul>
 
-<%= form_for [@question, @comment] do |f| %>
+<%= form_for [@question, @comment], :remote => true do |f| %>
   <%= f.label "Leave a Comment" %>
   <%= f.text_field :content %>
   <%= f.submit "Post Comment" %>
