@@ -29,6 +29,9 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :development do
+  gem 'binding_of_caller'
+end
 group :test do
 end
 
