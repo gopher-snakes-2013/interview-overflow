@@ -3,8 +3,12 @@ require 'spec_helper'
 describe QuestionsController do
   let!(:question) { FactoryGirl.create(:question) }
 
-	context 'index' do
-		it 'should provide a list of questions' do
+	context '#index' do
+    it 'visits the index page' do
+      get :index
+      expect(response).to render_template(:index)
+    end
+		it 'should list all questions' do
 			get :index
 			expect(assigns(:questions)).not_to be_nil
 		end
