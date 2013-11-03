@@ -44,9 +44,12 @@ describe QuestionsController do
     end
   end
   describe '#update' do
-    it 'increments the votes for a question' do
-    pending
-      expect(question.votes).to change
+    context 'when a guest or user votes' do
+      it "increments the votes for a question's votes" do
+        @question = Question.create(title: question.title, description: question.description)
+        post :update, id: @question.id
+        expect(Question.find(@question.id).votes).to eq(1)
+      end
     end
   end
 end
