@@ -25,6 +25,9 @@ describe QuestionsController do
           post :create, question: {title: question.title, description: question.description }
           }.to change(Question,:count).by(1)
       end
+      it "redirects to the root path" do
+        expect(response.status).to eq(200)
+      end
     end
     context 'when given invalid attributes' do
       it 'does not create a question' do

@@ -6,8 +6,12 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		Question.create(params[:question])
-		redirect_to root_path
+		@question = Question.new(params[:question])
+		if @question.save
+			redirect_to root_path
+		else
+			render :index
+		end
 	end
 
 	def show
