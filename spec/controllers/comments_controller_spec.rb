@@ -4,14 +4,16 @@ describe CommentsController do
   let!(:question) { create(:question) }
   let!(:comment) {create(:comment)}
 
-  context "#create" do
-    it "creates comment with valid params" do
-      expect {
-        post :create, question_id: question.id, comment: attributes_for(:comment)
-      }.to change{Comment.count}.by(1)
+  describe "#create" do
+    context "when given valid params" do
+      it "should create a comment" do
+        expect {
+          post :create, question_id: question.id, comment: attributes_for(:comment)
+        }.to change{Comment.count}.by(1)
+      end
     end
-
-    it "should not create comment with invalid params" do
+    context "when given invalid params"
+    it "should not create a comment" do
       expect {
         post :create, question_id: question.id, comment: { content: " " }
       }.not_to change{Comment.count}
