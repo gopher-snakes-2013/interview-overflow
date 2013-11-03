@@ -37,5 +37,17 @@ describe QuestionsController do
       end
     end
   end
+  describe '#show' do
+    it 'visits the question page' do
+      get :show, id: question.id
+      expect(response).to render_template(:show)
+    end
+  end
+  describe '#update' do
+    it 'increments the votes for a question' do
+    pending
+      expect(question.votes).to change
+    end
+  end
 end
 
