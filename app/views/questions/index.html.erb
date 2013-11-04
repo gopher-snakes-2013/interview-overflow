@@ -1,16 +1,16 @@
-
+<h2>Submit a Question!</h2>
 <%= form_for @question do |f| %>
   <%= f.text_field :title, placeholder: "Question"%>
   <br />
   <%= f.text_area :description, placeholder: "Question Details" %>
   <br />
-  <%= f.submit "Submit Question"%>
+  <%= f.submit "Submit"%>
 <% end %>
-<h2>List of Popular Interview Questions</h2>
-<ul>
+<h3>List of Popular Interview Questions</h3>
+<ul id='questions_list'>
 	<% @questions.each do |question| %>
 		<li><h3><%= link_to question.title, question_path(question.id) %>
       <span id=votes_for_<%=question.id%>>: <%= question.votes if question.votes>0 %></span>
-      <%= button_to('+1', question_path(question), method: 'put')%></h3><%= question.created_at %></li>
+      <%= button_to('+1', question_path(question), method: 'put', class: 'plus1')%></h3><%= time_ago_in_words(question.created_at) %></li>
 	<% end %><br>
 </ul>

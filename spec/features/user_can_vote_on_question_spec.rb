@@ -6,7 +6,7 @@ feature 'User can vote on a question' do
     visit root_path
     fill_in('question[title]', with: 'my title')
     fill_in('question[description]', with: 'my content')
-    click_button('Submit Question')
+    click_button('Submit')
   end
 
   context 'when on homepage' do
