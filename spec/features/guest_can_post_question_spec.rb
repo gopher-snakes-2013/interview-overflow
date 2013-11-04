@@ -7,7 +7,7 @@ feature 'Guest can post a question' do
         visit root_path
         fill_in 'Question', with: "What are your weaknesses?"
         fill_in 'Question Details', with: "I don't have any weaknesses, so should I lie to make myself look normal?"
-        click_button "Submit Question"
+        click_button "Submit"
       }.to change(Question,:count).by(1)
     end
   end
@@ -17,7 +17,7 @@ feature 'Guest can post a question' do
         visit root_path
         fill_in 'Question', with: ""
         fill_in 'Question Details', with: "Will this post without an actual Question?"
-        click_button "Submit Question"
+        click_button "Submit"
       }.to_not change(Question,:count)
     end
   end
@@ -27,7 +27,7 @@ feature 'Guest can post a question' do
         visit root_path
         fill_in 'Question', with: "Will this post with just the question?"
         fill_in 'Question Details', with: ""
-        click_button "Submit Question"
+        click_button "Submit"
       }.to_not change(Question,:count)
     end
   end
@@ -37,7 +37,7 @@ feature 'Guest can post a question' do
         visit root_path
         fill_in 'Question', with: "Why?"
         fill_in 'Question Details', with: "Will this post with a really short Question?"
-        click_button "Submit Question"
+        click_button "Submit"
       }.to_not change(Question,:count)
     end
   end
@@ -47,7 +47,7 @@ feature 'Guest can post a question' do
         visit root_path
         fill_in 'Question', with: "Will this post with a question description that is too short?"
         fill_in 'Question Details', with: "what?"
-        click_button "Submit Question"
+        click_button "Submit"
       }.to_not change(Question,:count)
     end
   end
