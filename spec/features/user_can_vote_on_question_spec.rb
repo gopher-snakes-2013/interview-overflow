@@ -15,7 +15,7 @@ feature 'User can vote up a question' do
     end
 
     context 'when user clicks +1 button' do
-      it 'should result in a change in the votes field for that question' do
+      it 'should increment the votes count for that question' do
         click_button('+1')
         expect(Question.first.votes).to eq(1)
       end
