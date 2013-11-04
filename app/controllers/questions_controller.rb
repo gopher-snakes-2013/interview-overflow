@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
 		if @question.save
 			redirect_to root_path
 		else
-			render :index
+			redirect_to root_path
 		end
 	end
 
