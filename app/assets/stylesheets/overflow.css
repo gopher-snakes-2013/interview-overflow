@@ -1,0 +1,78 @@
+html {
+  background-color: #ecf0f1;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 16px;
+}
+
+#container {
+  padding-left: 1em;
+}
+
+#navbar {
+  width: 100%;
+  height: 3em;
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 2px 5px #888888;
+  margin-bottom: 3em;
+  padding-bottom: 8px;
+}
+
+
+#navbar h1 {float: left; width: 30%; font-size: 1.5em; padding-left: 10px;}
+#navbar h1 a {color: white; text-decoration: none; text-shadow: black 0.1em 0.1em 0.2em}
+
+#navlist {
+  list-style: none;
+  width: 65%;
+  float: right;
+}
+
+#navlist li {
+  display: inline;
+  float: right;
+  margin-right: 1em;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+#navlist a {
+  color: white;
+  text-decoration: none;
+}
+
+#question_description {
+  display: block;
+  width: 600px;
+  height: 120px;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  line-height: 130%;
+  font-size: 13px;
+  box-shadow: 0 2px 5px #888888;
+}
+
+#question_title {
+  display: block;
+  width: 400px;
+  height: 20px;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  line-height: 130%;
+  font-size: 13px;
+  box-shadow: 0 2px 5px #888888;
+}
+
+#questions_list {
+  list-style: none;
+}
+
+#questions_list h3 {
+  color: red;
+}
+
+.plus1 {
+
+}
+
+.timestamp {
+  font-size: 75%;
+}
