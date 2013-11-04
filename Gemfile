@@ -39,7 +39,7 @@ gem 'rails_12factor', group: :production
 
 gem 'jquery-rails'
 
-ruby '2.0.0'
+ruby '1.9.3' #when pushing to heroku use => ruby '2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
