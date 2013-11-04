@@ -5,8 +5,5 @@ InterviewOverflow::Application.routes.draw do
   resources :questions do
     resources :comments, :only => [:create]
   end
-
-
-
 end
 
