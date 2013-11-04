@@ -15,12 +15,12 @@ html {
   color: white;
   box-shadow: 0 2px 5px #888888;
   margin-bottom: 3em;
-  padding-bottom: 8px
+  padding-bottom: 8px;
 }
 
 
 #navbar h1 {float: left; width: 30%; font-size: 1.5em; padding-left: 10px;}
-#navbar h1 a {color: white; text-decoration: none;}
+#navbar h1 a {color: white; text-decoration: none; text-shadow: black 0.1em 0.1em 0.2em}
 
 #navlist {
   list-style: none;
@@ -32,9 +32,11 @@ html {
   display: inline;
   float: right;
   margin-right: 1em;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 #navlist a {
   color: white;
+  text-decoration: none;
 }
 
 #question_description {
@@ -69,4 +71,8 @@ html {
 
 .plus1 {
 
+}
+
+.timestamp {
+  font-size: 75%;
 }

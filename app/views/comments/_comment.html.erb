@@ -1,1 +1,1 @@
-<li><%= comment.content %> - <%= comment.created_at.localtime.strftime("Posted on %b %d, %Y at %l:%M %P") %></li>
+<li><%= comment.content %> - <span class='timestamp'>Posted <%= time_ago_in_words(comment.created_at)%> ago</span></li>
