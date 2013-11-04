@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "User can visit a question page to leave a comment" do
+feature "User can visit a question page to leave a comment" do
   let(:args) {{title: question.title, description: question.description}}
   let!(:new_question) {Question.create(args)}
   let!(:question) { create(:question) }
