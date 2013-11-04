@@ -12,5 +12,19 @@ describe "User can visit a question page to leave a comment" do
       click_on "Post Comment"
       expect(page).to have_content comment.content
     end
+    it "should add a comment to the database" do
+      visit question_path(question.id)
+      fill_in "comment[content]", with: comment.content
+      expect{
+        click_on "Post Comment"
+      }.to change(Comment, :count).by(1)
+    end
+    it "should not post an invalid comment" do
+      visit question_path(question.id)
+      fill_in "comment[content]", with: "What?"
+      expect{
+        click_on "Post Comment"
+      }.not_to change(Comment, :count)
+    end
   end
 end
