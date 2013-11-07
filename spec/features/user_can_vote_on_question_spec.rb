@@ -8,6 +8,7 @@ feature 'User can vote up a question' do
     click_button('Submit')
   end
   context 'when visiting homepage with a list of Question posts' do
+    # emtpy test
     it 'should see a +1 button next to the question' do
       click_button('+1')
     end

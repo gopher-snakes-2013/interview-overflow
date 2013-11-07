@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe QuestionsController do
-  let!(:question) { FactoryGirl.create(:question) }
+  let!(:question) { create(:question) }
 
 	describe '#index' do
     it 'visits the index page' do
@@ -22,7 +22,7 @@ describe QuestionsController do
     context 'when given valid attributes' do
       it "creates a question" do
         expect{
-          post :create, question: {title: question.title, description: question.description }
+          post :create, question: attributes_for(:question)
           }.to change(Question,:count).by(1)
       end
       it "redirects to the root path" do

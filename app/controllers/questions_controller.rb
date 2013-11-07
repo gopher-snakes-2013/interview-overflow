@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
 
 	def index
 		@question = Question.new
+		# if you're always sorting by votes, then move it to the model as a default order.
 		@questions = Question.order('votes DESC')
 	end
 
@@ -10,7 +11,8 @@ class QuestionsController < ApplicationController
 		if @question.save
 			redirect_to root_path
 		else
-			redirect_to root_path
+			@questions = Question.order('votes DESC')
+			render :index
 		end
 	end
 
@@ -21,8 +23,7 @@ class QuestionsController < ApplicationController
 
 	def update
 		question = Question.find(params[:id])
-		question.votes += 1
-		question.update_attribute(:votes,question.votes)
+		question.vote!
 		render json: {votes: question.votes,id: question.id}
 	end
 end

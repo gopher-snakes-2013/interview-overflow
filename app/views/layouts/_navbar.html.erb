@@ -1,0 +1,11 @@
+<div id=navbar>
+  <h1><span><%= link_to 'Interview Overflow', root_path %></span></h1>
+  <ul id="navlist">
+    <% if signed_in? %>
+      <li><%= link_to 'Sign out', sign_out_path, :method => :delete %></li>
+      <li><%= current_user.email %></li>
+    <% else %>
+      <li><%= link_to 'Sign in', sign_in_path %></li>
+    <% end %>
+  </ul>
+</div>

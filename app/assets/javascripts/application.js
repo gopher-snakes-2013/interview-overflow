@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree ../../../vendor/javascripts/.
 //= require_tree .

@@ -2,9 +2,10 @@ $(document).ready(function(){
   updateVotes()
 })
 
+// you're poluting the global namespace, use objects/modules to namespace your method.
 var updateVotes = function(){
   $('.button_to').submit(function(e){
-    
+
     e.preventDefault()
     var $form = $(this)
 

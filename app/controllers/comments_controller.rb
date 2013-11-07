@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 
 	def create
-		@comment = Comment.new(params[:comment])
-		@comment.question_id = params[:question_id]
+    question = Question.find params[:question_id]
+		@comment = question.comments.build(params[:comment])
 		if @comment.save
 			render json: { insightful_comment: render_to_string( partial: 'comment', locals: { comment: @comment }) }
 		else

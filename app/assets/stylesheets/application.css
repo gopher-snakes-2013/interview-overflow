@@ -9,5 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_tree ../../../vendor/stylesheets/.
  *= require_tree .
  */
+
+/*
+put normalize.css and any 3rd party code inside vendor/assets/stylesheets/
+line 12 requires everthing inside the vendor.
+*/

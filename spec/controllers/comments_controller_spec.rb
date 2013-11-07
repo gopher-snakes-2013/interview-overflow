@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe CommentsController do
   let!(:question) { create(:question) }
-  let!(:comment) {create(:comment)}
 
   describe "#create" do
     context "when given valid params" do
