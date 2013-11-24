@@ -6,7 +6,7 @@ Team Members
 ------------
 - Charles A.
 - Ryan H.
-- Steven N.
+- Carter S.
 - Robert T.
 
 [X] MVP:
