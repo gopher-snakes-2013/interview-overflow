@@ -7,6 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 gem 'clearance'
+gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,7 +40,7 @@ gem 'rails_12factor', group: :production
 
 gem 'jquery-rails'
 
-ruby '1.9.3' #when pushing to heroku use => ruby '2.0.0'
+ruby '2.0.0' #when pushing to heroku use => ruby '2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
